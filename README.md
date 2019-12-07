@@ -90,8 +90,9 @@ E:\Git\springbootdemo02>docker run -p 8010:8010 -t springio/springbootdemo02
 2019-12-07 02:28:42.475  INFO 1 --- [nio-8010-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 35 ms
 ```
 ## 问题记录
-
+无
 ## 参考资料
 
 - [springboot整合docker部署（两种构建Docker镜像方式）](https://www.cnblogs.com/shamo89/p/9201513.html)
 - [第一个 spring Boot 应用通过Docker 来实现构建、运行、发布](https://blog.csdn.net/u010046908/article/details/56008445?fps=1&locationNum=13)
+- [docker_File 执行报错总结](https://www.cnblogs.com/liaojiafa/p/8901522.html)
