@@ -62,7 +62,7 @@ E:\Git\springbootdemo02>docker images
 REPOSITORY                          TAG                 IMAGE ID            CREATED             SIZE
 springio/springbootdemo02           latest              3c1a2afa31a8        5 minutes ago       199MB
 ```
-发布容器
+2、发布容器
 
 ```$xslt
 E:\Git\springbootdemo02>docker run -p 8010:8010 -t springio/springbootdemo02
