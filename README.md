@@ -89,10 +89,44 @@ E:\Git\springbootdemo02>docker run -p 8010:8010 -t springio/springbootdemo02
 2019-12-07 02:28:42.439  INFO 1 --- [nio-8010-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-12-07 02:28:42.475  INFO 1 --- [nio-8010-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 35 ms
 ```
+## 推送 Image 到 Docker hub
+首先，你在 Docker Hub 要有注册账号，且创建了相应的库；
+
+其次，docker 推送前，先要登录，否则报unauthorized: access to the requested resource is not authorized的错误
+
+执行：
+```
+docker login
+```
+输出为：
+```jshelllanguage
+[root@node203 spring-boot]# docker login
+Username: yichaozhang
+Password: 
+Email: yichao0803@gmail.com
+WARNING: login credentials saved in /root/.docker/config.json
+Login Succeeded
+```
+执行推送
+```jshelllanguage
+
+docker push yichaozhang/springbootdemo02
+[root@node203 spring-boot]# docker push yichaozhang/springbootdemo02 
+The push refers to a repository [docker.io/yichaozhang/springbootdemo02 ]
+751d29eef02e: Layer already exists 
+4da3741f39c7: Pushed 
+5f70bf18a086: Layer already exists 
+7e4d0cb13643: Layer already exists 
+8f045733649f: Layer already exists 
+latest: digest: sha256:eb4d5308ba1bb27489d808279e74784bda6761b3574f4298d746abba59b35164 size: 9415
+
+```
+
 ## 问题记录
 无
 ## 参考资料
 
+- [用 Docker 构建、运行、发布一个 Spring Boot 应用](https://waylau.com/docker-spring-boot/)
 - [springboot整合docker部署（两种构建Docker镜像方式）](https://www.cnblogs.com/shamo89/p/9201513.html)
 - [第一个 spring Boot 应用通过Docker 来实现构建、运行、发布](https://blog.csdn.net/u010046908/article/details/56008445?fps=1&locationNum=13)
 - [docker_File 执行报错总结](https://www.cnblogs.com/liaojiafa/p/8901522.html)
