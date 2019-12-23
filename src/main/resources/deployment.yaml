@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springbootdemo02
+  name: springbootdemo02-deployment
   namespace: spring-test
 spec:
   selector:
