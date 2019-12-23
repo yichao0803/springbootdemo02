@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springbootdemo02
+  namespace: spring-test
+spec:
+  selector:
+    matchLabels:
+      app: springbootdemo02
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: springbootdemo02
+    spec:
+      containers:
+      - name: springbootdemo02
+        image: hub.bjgoodwillnode4.com/library/springbootdemo02:v1.0.0
+        ports:
+        - containerPort: 8010

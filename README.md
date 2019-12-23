@@ -60,12 +60,12 @@ mvn package docker:build
 ```$xslt
 E:\Git\springbootdemo02>docker images
 REPOSITORY                          TAG                 IMAGE ID            CREATED             SIZE
-springio/springbootdemo02           latest              3c1a2afa31a8        5 minutes ago       199MB
+yichaozhang/springbootdemo02           latest              3c1a2afa31a8        5 minutes ago       199MB
 ```
 2、发布容器
 
 ```$xslt
-E:\Git\springbootdemo02>docker run -p 8010:8010 -t springio/springbootdemo02
+E:\Git\springbootdemo02>docker run -p 8010:8010 -t yichaozhang/springbootdemo02
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \

@@ -1,3 +1,4 @@
+version: v@project.version@
 server:
   port: 8010
 
@@ -5,6 +6,9 @@ server:
 spring:
   application:
     name: testLatticeApp
+  profiles:
+    # 设置使用的配置文件为 random 后缀的
+    active: random
 
 ribbon:
   ServerListRefreshInterval: 1000
@@ -16,3 +20,32 @@ endpoints:
     enabled: true
   shutdown:
     enabled: true
+
+
+# 测试中使用的作者信息
+author:
+  # 姓名
+  name: summer
+  # 年龄
+  # age: 18
+  # 性别
+  gender: man
+
+# 测试中使用的作者信息
+author2:
+  # 姓名
+  name: summer
+  # 年龄
+  age: 18
+  # 性别
+  gender: man
+
+  # Map 的测试数据
+  wife[name]: lili
+  wife[age]: 19
+
+  # List 的测试数据
+  books[0]: spring
+  books[1]: java
+
+  introduce:  Name:${author2.name},Age:${author2.gender}
