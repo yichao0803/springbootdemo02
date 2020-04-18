@@ -1,12 +1,12 @@
 package com.zyccx.springbootdemo02;
 
-import com.sun.javafx.binding.StringFormatter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.text.MessageFormat;
 
 /**
  * TODO
@@ -26,7 +26,7 @@ public class IndexContronller {
 
         StringBuilder stb = new StringBuilder();
         stb.append("Hello World").append(sp);
-        stb.append(StringFormatter.format("Version:{0}",authorValue.getVersion())).append(sp);
+        stb.append(MessageFormat.format("Version:{0}",authorValue.getVersion())).append(sp);
         stb.append("<a href=\"/hostName\">hostName<a/>");
         stb.append("\n");
         return stb.toString();
@@ -38,8 +38,8 @@ public class IndexContronller {
         try {
             localHost = InetAddress.getLocalHost();
             StringBuilder stb=new StringBuilder();
-            stb.append(StringFormatter.format("Address：{0}",localHost.getHostAddress())).append(sp);
-            stb.append(StringFormatter.format("Hostname：{0}",localHost.getHostName())).append(sp);
+            stb.append(MessageFormat.format("Address：{0}",localHost.getHostAddress())).append(sp);
+            stb.append(MessageFormat.format("Hostname：{0}",localHost.getHostName())).append(sp);
             stb.append("<a href=\"/\">home<a/>").append(sp);
             stb.append("\n");
             return  stb.toString();
